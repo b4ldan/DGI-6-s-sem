@@ -1,4 +1,4 @@
-for messages_count in (0,21):
+for messages_count in range(0,21):
     if messages_count == 0:
         print('У вас нет сообщений')
     elif messages_count == 1:
