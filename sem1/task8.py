@@ -1,6 +1,5 @@
 pigs=['Ниф-ниф','Наф-наф','Нуф-нуф']
 print('Дорогие свиньи!')
-for pig in pigs: 
-    print(pig)
+for pig in pigs:print(pig)
 print('приглашаю вас на ужин!')
 print('Любящйи вас Волк.')
