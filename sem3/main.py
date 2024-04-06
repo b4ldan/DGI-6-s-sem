@@ -26,6 +26,9 @@ for i in range (0, aud_data_size,2):
 
 time = np.linspace(0,len(aud_amps)/sample_rate,len(aud_amps))
 
+spectre = np.fft.fft(aud_amps)
+abd_spectre = abs(spectre)
+
 plt.plot(time,aud_amps)
 plt.show()
 
