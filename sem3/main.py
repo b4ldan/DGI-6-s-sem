@@ -25,6 +25,7 @@ for i in range (0, aud_data_size,2):
     aud_amps.append(amp)
 
 time = np.linspace(0,len(aud_amps)/sample_rate,len(aud_amps))
+freq = np.linspace()
 
 spectre = np.fft.fft(aud_amps)
 abd_spectre = abs(spectre)
