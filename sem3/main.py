@@ -1,15 +1,24 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import copy
+import math import ceil
 
-fileObj = open('sem3/1kHz_44100Hz_16bit_05sec.wav', mode='rb')
+class Audio_Item():
+    def __init__(self, file_name:str) -> None:
+        file_obj = open(file_name, ,mode ='rb')
+        file_data = file_obj.read()
+        file_obj.close()
 
-data=fileObj.read()
+        #file size
+        file_size_inbytes = file_data[4:8] 
+        file_size = int.from_bytes(file_size_inbytes, byteorder = "little")
 
-file_size_inbytes = data[4:8] 
-file_size = int.from_bytes(file_size_inbytes, byteorder = "little")
+        chan_num_inbyte = data[22:24]
+        chan_num = int.from_bytes(chan_num_inbyte, byteorder = "little")
 
-chan_num_inbyte = data[22:24]
-chan_num = int.from_bytes(chan_num_inbyte, byteorder = "little")
+        aud_data_size_inbytes = data[40:44]
+        aud_data_size = int.from_bytes(aud_data_size_inbytes, byteorder = "little")   
+
 
 aud_data_size_inbytes = data[40:44]
 aud_data_size = int.from_bytes(aud_data_size_inbytes, byteorder = "little")
