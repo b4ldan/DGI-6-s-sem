@@ -2,6 +2,6 @@ import socket
 
 client= socket.socket()
 
-client.connect(('localhost', int(3000)))
+client.connect(('172.20.10.3', int(3000)))
 
 client.close()
